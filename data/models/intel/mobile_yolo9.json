@@ -1,0 +1,26 @@
+{
+  "json_schema_version": 1.0,
+  "input_preproc": [
+    {
+      "color_format": "RGB"
+    }
+  ],
+  "output_postproc": [
+    {
+      "labels": [
+        "car",
+        "bus",
+        "person",
+        "bike",
+        "truck",
+        "motor",
+        "rider",
+        "traffic_sign",
+        "traffic_light"
+      ],
+      "layer_name": "separable_conv2d_15/BiasAdd/YoloRegion",
+      "converter": "tensor_to_label",
+      "method": "max"
+    }
+  ]
+}
